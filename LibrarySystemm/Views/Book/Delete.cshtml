@@ -1,0 +1,27 @@
+﻿@model LibrarySystemm.Models.Book
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sil</title>
+</head>
+<body>
+    <h1>Book Sil</h1>
+    <p>Book Id Numarası: @Model.Id</p>
+    <hr />
+    <form asp-controller="Home" asp-action="Sil" method="post" enctype="multipart/form-data">
+        <input type="text" asp-for="ISBN no" value="@Model.ISBN"> <br />
+        <input type="text" asp-for="Name" value="@Model.NAME"> <br />
+        <input type="text" asp-for="Page Number" value="@Model.PAGENUMBER"> <br />
+        <input type="text" asp-for="Language" value="@Model.LANGUAGE"> <br />
+        <input type="text" asp-for="Category" value="@Model.CATEGORY"> <br />
+        <input type="checkbox" asp-for="Completed" value="@Model.Completed"> <br />
+        <button type="submit">Delete Book</button>
+    </form>
+</body>
+</html>
